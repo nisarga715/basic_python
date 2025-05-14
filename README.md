@@ -1,1 +1,266 @@
 # basic_python
+@@ -0,0 +1,264 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "4ea2c938-b4f6-4a56-bc3e-6d47f0adc437",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a positive number -2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "-2 is not a prime number\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise 1: Prime Numbers\n",
+    "\n",
+    "#import required libraries\n",
+    "from statistics import math\n",
+    "\n",
+    "#define a function to check prime or not\n",
+    "def is_prime(number):\n",
+    "    if number <= 1:\n",
+    "        return False\n",
+    "    for i in range(2, int(math.sqrt(number))+1):\n",
+    "        if number % i == 0:\n",
+    "            return False\n",
+    "    return True\n",
+    "\n",
+    "#take user input\n",
+    "number=int(input(\"Enter a positive number\"))\n",
+    "if is_prime(number):\n",
+    "    print(f\"{number} is a prime number\")\n",
+    "    \n",
+    "else:\n",
+    "    print(f\"{number} is not a prime number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "fd28d0ed-983f-44f1-b80c-12613f0d0fb1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "what is 7*2 2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "wrong answer! the correct answer is 14\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise 2: Product of Random Numbers\n",
+    "\n",
+    "#imoprt required libraries\n",
+    "import random\n",
+    "num1=random.randint(1,10)\n",
+    "num2=random.randint(1,10)\n",
+    "\n",
+    "#user input\n",
+    "user=int(input(f\"what is {num1}*{num2}\"))\n",
+    "\n",
+    "#validate the answer\n",
+    "if user==num1*num2:\n",
+    "    print(\"correct answer\")\n",
+    "else:\n",
+    "    print(f\"wrong answer! the correct answer is {num1*num2}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "e7462364-75e6-470a-b87a-3ce47fd1132d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "101^2=10201\n",
+      "103^2=10609\n",
+      "105^2=11025\n",
+      "107^2=11449\n",
+      "109^2=11881\n",
+      "111^2=12321\n",
+      "113^2=12769\n",
+      "115^2=13225\n",
+      "117^2=13689\n",
+      "119^2=14161\n",
+      "121^2=14641\n",
+      "123^2=15129\n",
+      "125^2=15625\n",
+      "127^2=16129\n",
+      "129^2=16641\n",
+      "131^2=17161\n",
+      "133^2=17689\n",
+      "135^2=18225\n",
+      "137^2=18769\n",
+      "139^2=19321\n",
+      "141^2=19881\n",
+      "143^2=20449\n",
+      "145^2=21025\n",
+      "147^2=21609\n",
+      "149^2=22201\n",
+      "151^2=22801\n",
+      "153^2=23409\n",
+      "155^2=24025\n",
+      "157^2=24649\n",
+      "159^2=25281\n",
+      "161^2=25921\n",
+      "163^2=26569\n",
+      "165^2=27225\n",
+      "167^2=27889\n",
+      "169^2=28561\n",
+      "171^2=29241\n",
+      "173^2=29929\n",
+      "175^2=30625\n",
+      "177^2=31329\n",
+      "179^2=32041\n",
+      "181^2=32761\n",
+      "183^2=33489\n",
+      "185^2=34225\n",
+      "187^2=34969\n",
+      "189^2=35721\n",
+      "191^2=36481\n",
+      "193^2=37249\n",
+      "195^2=38025\n",
+      "197^2=38809\n",
+      "199^2=39601\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise 3: Squares of Even/Odd Numbers\n",
+    "\n",
+    "#imoprt required libraries\n",
+    "from statistics import math\n",
+    "\n",
+    "#loop through 100 to 200\n",
+    "for num in range(100, 201):\n",
+    "    if num % 2 == 0:   #check if the number is even\n",
+    "        print(f\"{num}^2={num**2}\")\n",
+    "\n",
+    "#for odd use if num % 2 != 0: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "7465a8cb-fec9-4b55-8aa7-5f0f9ec87ba7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "this : 2\n",
+      "is : 1\n",
+      "a : 1\n",
+      "sample : 1\n",
+      "text : 2\n",
+      "will : 1\n",
+      "be : 1\n",
+      "used : 1\n",
+      "to : 1\n",
+      "demonstrate : 1\n",
+      "the : 1\n",
+      "word : 1\n",
+      "counter : 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise 4: Word counter\n",
+    "\n",
+    "import string\n",
+    "from collections import Counter\n",
+    "\n",
+    "def word_counter(text):\n",
+    "    cleaned_text=text.translate(str.maketrans('', '', string.punctuation)).lower()    #remove punctuation and converting to lowercase\n",
+    "    \n",
+    "    words=cleaned_text.split()     #split the cleaned words\n",
+    "    \n",
+    "    word_count=Counter(words)      #count the words\n",
+    "    \n",
+    "    for word, freq in word_count.items():\n",
+    "        print(f\"{word} : {freq}\")\n",
+    "\n",
+    "#input testing\n",
+    "text=\"This is a sample text. This text will be used to demonstrate the word counter.\"\n",
+    "word_counter(text)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "42af10bd-810e-45de-8609-53b2906f378a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise 5: Check for Palindrome\n",
+    "\n",
+    "import string\n",
+    "\n",
+    "def ifPalindrome(s):\n",
+    "    s=''.join (e for e in s if e.isalnum()).lower()   #removes alphanumerical characters and converts characters to lowercase\n",
+    "    return s==s[::-1]     #checks if string is equal in reverse\n",
+    "\n",
+    "input=\"racecar\"\n",
+    "\n",
+    "if ifPalindrome(input):\n",
+    "   print(True)\n",
+    "else:\n",
+    "    print(False)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
